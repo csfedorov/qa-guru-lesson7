@@ -16,9 +16,9 @@ public class ZipPasswordTest {
     static final Charset charset = StandardCharsets.UTF_8;
 
     @Test
-    void zipTest() throws Exception {
+    void zipFileTest() throws Exception {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream stream = classLoader.getResourceAsStream("text-pass.zip");
+        InputStream stream = classLoader.getResourceAsStream("zip/text-pass.zip");
         String entryAsString = null;
         try (ZipInputStream zipStream = new ZipInputStream(stream, password.toCharArray(), charset)) {
             while (zipStream.getNextEntry() != null) {

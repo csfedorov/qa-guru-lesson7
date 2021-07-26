@@ -1,4 +1,4 @@
-package tests;
+package tests.codeborn;
 
 import com.codeborne.xlstest.XLS;
 import org.apache.commons.io.FileUtils;
@@ -14,9 +14,9 @@ import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class XlsTestWithCodeborn {
+public class XlsTest {
 
     static final String PATH_TO_DLD = "src/test/java/downloads";
 

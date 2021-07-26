@@ -1,4 +1,4 @@
-package tests;
+package tests.codeborn;
 
 import com.codeborne.pdftest.PDF;
 import org.apache.commons.io.FileUtils;
@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class PdfTestWithCodeborn {
+public class PdfTest {
 
     static final String PATH_TO_DLD = "src/test/java/downloads";
 
@@ -32,7 +32,7 @@ public class PdfTestWithCodeborn {
     }
 
     @Test
-    void docxFileTest() throws IOException {
+    void pdfFileTest() throws IOException {
 
         open("/sample-documents-download/sample-pdf-download/");
         File downloadedPdfFile = $(byAttribute("download", "file-sample_150kB.pdf"))
