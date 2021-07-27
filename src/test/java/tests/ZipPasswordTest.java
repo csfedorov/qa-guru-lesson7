@@ -12,17 +12,17 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ZipPasswordTest {
 
-    static final String password = "123qwe";
-    static final Charset charset = StandardCharsets.UTF_8;
+    static final String PASSWORD = "123qwe";
+    static final Charset CHARSET = StandardCharsets.UTF_8;
 
     @Test
     void zipFileTest() throws Exception {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream stream = classLoader.getResourceAsStream("zip/text-pass.zip");
         String entryAsString = null;
-        try (ZipInputStream zipStream = new ZipInputStream(stream, password.toCharArray(), charset)) {
+        try (ZipInputStream zipStream = new ZipInputStream(stream, PASSWORD.toCharArray(), CHARSET)) {
             while (zipStream.getNextEntry() != null) {
-                entryAsString = IOUtils.toString(zipStream, charset);
+                entryAsString = IOUtils.toString(zipStream, CHARSET);
             }
         }
         assertThat(entryAsString).contains("Vestibulum neque massa, scelerisque sit amet ligula eu, congue molestie mi.");
