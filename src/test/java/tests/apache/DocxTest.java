@@ -13,7 +13,6 @@ public class DocxTest {
 
     @Test
     void docxFileTest() throws Exception {
-
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream stream = classLoader.getResourceAsStream("doc/docSample.docx");
         assert stream != null;

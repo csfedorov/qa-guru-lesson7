@@ -12,7 +12,6 @@ public class XlsxTest {
 
     @Test
     void xlsxFileTest() throws Exception {
-
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream stream = classLoader.getResourceAsStream("doc/xlsSample.xlsx");
         assert stream != null;

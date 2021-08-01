@@ -13,7 +13,6 @@ public class PdfTest {
 
     @Test
     void pdfFileTest() throws IOException {
-
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream stream = classLoader.getResourceAsStream("doc/pdfSample.pdf");
         PDDocument pdfFile = PDDocument.load(stream);
